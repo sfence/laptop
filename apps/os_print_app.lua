@@ -75,8 +75,8 @@ laptop.register_app("printer_launcher", {
 		mtos.bdev:sync()
 		-- inventory fields
 		local formspec = "size[9,8]"..
-				"list[current_player;main;0.3,3.85;8,1;]" ..
-				"list[current_player;main;0.3,5.08;8,3;8]" ..
+				"list[current_player;main;0.3,3.85;10,1;]" ..
+				"list[current_player;main;0.3,5.08;10,3;10]" ..
 				"listring[nodemeta:"..mtos.pos.x..','..mtos.pos.y..','..mtos.pos.z..";main]" ..
 				"listring[current_player;main]"..
 				mtos.theme:get_label('0,0', mtos.hwdef.description, 'titlebar')
