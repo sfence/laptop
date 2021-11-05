@@ -1,4 +1,4 @@
-laptop.register_hardware("laptop:core", {
+laptop.register_hardware("hades_laptop:core", {
 	description = "CP Core",
 	infotext = 'CP Core',
 	sequence = { "closed", "open", "open_on" },
@@ -72,15 +72,15 @@ laptop.register_hardware("laptop:core", {
 })
 
 minetest.register_craft({
-	output = 'laptop:core_closed',
+	output = 'hades_laptop:core_closed',
 	recipe = {
-	{'dye:red', 'laptop:lcd', 'dye:red', },
-	{'laptop:HDD', 'laptop:motherboard', 'laptop:gpu', },
-	{'laptop:bat', 'laptop:case', 'dye:red', },
+	{'dye:red', 'hades_laptop:lcd', 'dye:red', },
+	{'hades_laptop:HDD', 'hades_laptop:motherboard', 'hades_laptop:gpu', },
+	{'hades_laptop:bat', 'hades_laptop:case', 'dye:red', },
 	}
 })
 
-laptop.register_hardware("laptop:printer", {
+laptop.register_hardware("hades_laptop:printer", {
 	description = "Flash Printex",
 	infotext = 'Flash Printex',
 	sequence = { "off", "powersave", "on" },
@@ -161,15 +161,15 @@ laptop.register_hardware("laptop:printer", {
 })
 
 minetest.register_craft({
-	output = 'laptop:printer_off',
+	output = 'hades_laptop:printer_off',
 	recipe = {
-	{'', 'laptop:motherboard', '', },
-	{'', 'laptop:psu', '', },
-	{'', 'laptop:case', '', },
+	{'', 'hades_laptop:motherboard', '', },
+	{'', 'hades_laptop:psu', '', },
+	{'', 'hades_laptop:case', '', },
 	}
 })
 
-laptop.register_hardware("laptop:cube", {
+laptop.register_hardware("hades_laptop:cube", {
 	description = "CUBE PC",
 	infotext = "CUBE PC",
 	os_version = '5.02',
@@ -227,15 +227,15 @@ laptop.register_hardware("laptop:cube", {
 })
 
 minetest.register_craft({
-	output = 'laptop:cube_off',
+	output = 'hades_laptop:cube_off',
 	recipe = {
-	{'', 'laptop:crt', '', },
-	{'laptop:HDD', 'laptop:motherboard', 'laptop:psu', },
-	{'laptop:cpu_65536', 'laptop:case', '', },
+	{'', 'hades_laptop:crt', '', },
+	{'hades_laptop:HDD', 'hades_laptop:motherboard', 'hades_laptop:psu', },
+	{'hades_laptop:cpu_65536', 'hades_laptop:case', '', },
 	}
 })
 
-laptop.register_hardware("laptop:fruit_zero", {
+laptop.register_hardware("hades_laptop:fruit_zero", {
 	description = "Fruit Zero",
 	infotext = "Fruit Zero",
 	sequence = { "off", "on"},
@@ -294,15 +294,15 @@ laptop.register_hardware("laptop:fruit_zero", {
 })
 
 minetest.register_craft({
-	output = 'laptop:fruit_zero_off',
+	output = 'hades_laptop:fruit_zero_off',
 	recipe = {
-	{'dye:white', 'laptop:lcd', 'dye:white', },
-	{'laptop:gpu', 'laptop:motherboard', 'laptop:HDD', },
-	{'laptop:cpu_jetcore', 'laptop:case', 'laptop:psu', },
+	{'dye:white', 'hades_laptop:lcd', 'dye:white', },
+	{'hades_laptop:gpu', 'hades_laptop:motherboard', 'hades_laptop:HDD', },
+	{'hades_laptop:cpu_jetcore', 'hades_laptop:case', 'hades_laptop:psu', },
 	}
 })
 
-laptop.register_hardware("laptop:bell_crossover", {
+laptop.register_hardware("hades_laptop:bell_crossover", {
 	description = "Bell CrossOver",
 	infotext = "Bell CrossOver",
 	os_version = "6.33",
@@ -363,16 +363,16 @@ laptop.register_hardware("laptop:bell_crossover", {
 })
 
 minetest.register_craft({
-	output = 'laptop:bell_crossover_off',
+	output = 'hades_laptop:bell_crossover_off',
 	recipe = {
-	{'dye:dark_grey', 'laptop:lcd', 'dye:dark_grey', },
-	{'laptop:psu', 'laptop:motherboard', 'laptop:HDD', },
-	{'laptop:cpu_d75a', 'laptop:case', 'dye:dark_grey', },
+	{'dye:dark_grey', 'hades_laptop:lcd', 'dye:dark_grey', },
+	{'hades_laptop:psu', 'hades_laptop:motherboard', 'hades_laptop:HDD', },
+	{'hades_laptop:cpu_d75a', 'hades_laptop:case', 'dye:dark_grey', },
 	}
 })
 
 --Kodiak 1000--
-laptop.register_hardware("laptop:kodiak_1000", {
+laptop.register_hardware("hades_laptop:kodiak_1000", {
 	description = "Kodiak 1000",
 	infotext = "Kodiak 1000",
 	sequence = { "off", "on"},
@@ -430,16 +430,16 @@ laptop.register_hardware("laptop:kodiak_1000", {
 })
 
 minetest.register_craft({
-	output = 'laptop:kodiak_1000_off',
+	output = 'hades_laptop:kodiak_1000_off',
 	recipe = {
-	{'', 'laptop:crt_green', '', },
-	{'laptop:cpu_c6', 'laptop:motherboard', 'laptop:psu', },
-	{'laptop:HDD', 'laptop:case', '', },
+	{'', 'hades_laptop:crt_green', '', },
+	{'hades_laptop:cpu_c6', 'hades_laptop:motherboard', 'hades_laptop:psu', },
+	{'hades_laptop:HDD', 'hades_laptop:case', '', },
 	}
 })
 
 -- Portable Workstation
-laptop.register_hardware("laptop:portable_workstation_2", {
+laptop.register_hardware("hades_laptop:portable_workstation_2", {
 	description = "Portable Workstation 2",
 	infotext = "Portable Workstation 2",
 	os_version = "5.02",
@@ -513,24 +513,24 @@ laptop.register_hardware("laptop:portable_workstation_2", {
 })
 
 minetest.register_craft({
-	output = 'laptop:portable_workstation_2_closed',
+	output = 'hades_laptop:portable_workstation_2_closed',
 	recipe = {
-	{'dye:dark_grey', 'laptop:lcd', 'dye:dark_grey', },
-	{'laptop:HDD', 'laptop:motherboard', 'laptop:cpu_d75a', },
-	{'laptop:bat', 'laptop:case', 'dye:dark_grey', },
+	{'dye:dark_grey', 'hades_laptop:lcd', 'dye:dark_grey', },
+	{'hades_laptop:HDD', 'hades_laptop:motherboard', 'hades_laptop:cpu_d75a', },
+	{'hades_laptop:bat', 'hades_laptop:case', 'dye:dark_grey', },
 	}
 })
 
 -- Conversion from older laptop version, before 2018-03
-minetest.register_alias("laptop:monitor2_off", "laptop:fruit_zero_off")
-minetest.register_alias("laptop:monitor2_on", "laptop:fruit_zero_on")
+minetest.register_alias("hades_laptop:monitor2_off", "hades_laptop:fruit_zero_off")
+minetest.register_alias("hades_laptop:monitor2_on", "hades_laptop:fruit_zero_on")
 
-minetest.register_alias("laptop:monitor4_off", "laptop:bell_crossover_off")
-minetest.register_alias("laptop:monitor4_on", "laptop:bell_crossover_on")
+minetest.register_alias("hades_laptop:monitor4_off", "hades_laptop:bell_crossover_off")
+minetest.register_alias("hades_laptop:monitor4_on", "hades_laptop:bell_crossover_on")
 
-minetest.register_alias("laptop:monitor3_off", "laptop:kodiak_1000_off")
-minetest.register_alias("laptop:monitor3_on", "laptop:kodiak_1000_on")
+minetest.register_alias("hades_laptop:monitor3_off", "hades_laptop:kodiak_1000_off")
+minetest.register_alias("hades_laptop:monitor3_on", "hades_laptop:kodiak_1000_on")
 
-minetest.register_alias("laptop:laptop_closed", "laptop:portable_workstation_2_closed")
-minetest.register_alias("laptop:laptop_open", "laptop:portable_workstation_2_open")
-minetest.register_alias("laptop:laptop_open_on", "laptop:portable_workstation_2_open_on")
+minetest.register_alias("hades_laptop:laptop_closed", "hades_laptop:portable_workstation_2_closed")
+minetest.register_alias("hades_laptop:laptop_open", "hades_laptop:portable_workstation_2_open")
+minetest.register_alias("hades_laptop:laptop_open_on", "hades_laptop:portable_workstation_2_open_on")

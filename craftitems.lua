@@ -4,13 +4,13 @@ local rc = laptop.recipe_compat -- Recipe items from other mods
 ---------PROCESSORS---------
 ----------------------------
 
-minetest.register_craftitem("laptop:cpu_c6", {
+minetest.register_craftitem("hades_laptop:cpu_c6", {
 	description = 'Ziram c6 Processor',
 	inventory_image = "laptop_cpu_c6.png",
 })
 
 minetest.register_craft({
-	output = 'laptop:cpu_c6',
+	output = 'hades_laptop:cpu_c6',
 	recipe = {
 		{'', '', ''},
 		{rc.silicon, rc.gates_diode, rc.tin},
@@ -18,13 +18,13 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:cpu_d75a", {
+minetest.register_craftitem("hades_laptop:cpu_d75a", {
 	description = 'Interlink D75A Processor',
 	inventory_image = "laptop_cpu_d75a.png",
 })
 
 minetest.register_craft({
-	output = 'laptop:cpu_d75a',
+	output = 'hades_laptop:cpu_d75a',
 	recipe = {
 		{rc.silicon, rc.silicon, rc.silicon},
 		{rc.gates_xor, rc.copper, rc.gates_nand},
@@ -32,13 +32,13 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:cpu_jetcore", {
+minetest.register_craftitem("hades_laptop:cpu_jetcore", {
 	description = 'Interlink jetCore Processor',
 	inventory_image = "laptop_cpu_jetcore.png",
 })
 
 minetest.register_craft({
-	output = 'laptop:cpu_jetcore',
+	output = 'hades_laptop:cpu_jetcore',
 	recipe = {
 		{rc.silicon, rc.silicon, rc.silicon},
 		{rc.fiber, rc.gold, rc.delayer},
@@ -46,13 +46,13 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:cpu_65536", {
+minetest.register_craftitem("hades_laptop:cpu_65536", {
 	description = 'Transpose 65536 Processor',
 	inventory_image = "laptop_cpu_65536.png",
 })
 
 minetest.register_craft({
-	output = 'laptop:cpu_65536',
+	output = 'hades_laptop:cpu_65536',
 	recipe = {
 		{'', '', ''},
 		{rc.silicon, rc.copper, rc.silicon},
@@ -60,13 +60,13 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:bat", {
+minetest.register_craftitem("hades_laptop:bat", {
 	description = 'Battery',
 	inventory_image = "laptop_bat.png",
 })
 
 minetest.register_craft({
-	output = 'laptop:bat',
+	output = 'hades_laptop:bat',
 	recipe = {
 		{rc.steel, rc.steel, rc.steel},
 		{rc.steel, rc.gates_diode, rc.steel},
@@ -74,13 +74,13 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:case", {
+minetest.register_craftitem("hades_laptop:case", {
 	description = 'Case',
 	inventory_image = "laptop_case.png",
 })
 
 minetest.register_craft({
-	output = 'laptop:case',
+	output = 'hades_laptop:case',
 	recipe = {
 		{rc.steel, rc.steel, rc.steel},
 		{rc.steel, '', rc.steel},
@@ -88,13 +88,13 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:crt", {
+minetest.register_craftitem("hades_laptop:crt", {
 	description = 'CRT Screen',
 	inventory_image = "laptop_crt.png",
 })
 
 minetest.register_craft({
-	output = 'laptop:crt',
+	output = 'hades_laptop:crt',
 	recipe = {
 		{rc.glass, rc.glass, rc.glass},
 		{rc.light_red , rc.light_green, rc.light_blue},
@@ -102,13 +102,13 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:crt_amber", {
+minetest.register_craftitem("hades_laptop:crt_amber", {
 	description = 'Amber CRT Screen',
 	inventory_image = "laptop_crt_amber.png",
 })
 
 minetest.register_craft({
-	output = 'laptop:crt_amber',
+	output = 'hades_laptop:crt_amber',
 	recipe = {
 		{rc.glass, 'dye:orange', rc.glass},
 		{rc.light_red , rc.light_green, rc.light_blue},
@@ -116,13 +116,13 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:crt_green", {
+minetest.register_craftitem("hades_laptop:crt_green", {
 	description = 'Green CRT Screen',
 	inventory_image = "laptop_crt_green.png",
 })
 
 minetest.register_craft({
-	output = 'laptop:crt_green',
+	output = 'hades_laptop:crt_green',
 	recipe = {
 		{rc.glass, 'dye:green', rc.glass},
 		{rc.light_red , rc.light_green, rc.light_blue},
@@ -130,13 +130,13 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:lcd", {
+minetest.register_craftitem("hades_laptop:lcd", {
 	description = 'LCD Screen',
 	inventory_image = "laptop_lcd.png",
 })
 
 minetest.register_craft({
-	output = 'laptop:lcd',
+	output = 'hades_laptop:lcd',
 	recipe = {
 		{rc.light_red , rc.light_green, rc.light_blue},
 		{'dye:black', rc.controller, 'dye:black'},
@@ -144,13 +144,13 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:gpu", {
+minetest.register_craftitem("hades_laptop:gpu", {
 	description = 'GPU',
 	inventory_image = "laptop_gpu.png",
 })
 
 minetest.register_craft({
-	output = 'laptop:gpu',
+	output = 'hades_laptop:gpu',
 	recipe = {
 		{rc.steel, rc.steel, rc.steel},
 		{rc.steel, rc.fpga, rc.steel},
@@ -158,13 +158,13 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:HDD", {
+minetest.register_craftitem("hades_laptop:HDD", {
 	description = 'Hard Drive',
 	inventory_image = "laptop_harddrive.png",
 })
 
 minetest.register_craft({
-	output = 'laptop:HDD',
+	output = 'hades_laptop:HDD',
 	recipe = {
 		{rc.steel, rc.steel, rc.steel},
 		{rc.steel, rc.controller, rc.steel},
@@ -172,13 +172,13 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:motherboard", {
+minetest.register_craftitem("hades_laptop:motherboard", {
 	description = 'Motherboard',
 	inventory_image = "laptop_motherboard.png",
 })
 
 minetest.register_craft({
-	output = 'laptop:motherboard',
+	output = 'hades_laptop:motherboard',
 	recipe = {
 		{rc.controller, rc.fpga, rc.gates_nand},
 		{'dye:dark_green', 'dye:dark_green', 'dye:dark_green'},
@@ -186,13 +186,13 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:fan", {
+minetest.register_craftitem("hades_laptop:fan", {
 	description = 'Fan',
 	inventory_image = "laptop_fan.png",
 })
 
 minetest.register_craft({
-	output = 'laptop:fan',
+	output = 'hades_laptop:fan',
 	recipe = {
 		{'', rc.steel, ''},
 		{rc.steel, rc.steel, rc.steel},
@@ -200,21 +200,21 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:psu", {
+minetest.register_craftitem("hades_laptop:psu", {
 	description = 'PSU',
 	inventory_image = "laptop_psu.png",
 })
 
 minetest.register_craft({
-	output = 'laptop:psu',
+	output = 'hades_laptop:psu',
 	recipe = {
 		{rc.steel, rc.steel, rc.steel},
-		{rc.controller, rc.fpga, 'laptop:fan'},
+		{rc.controller, rc.fpga, 'hades_laptop:fan'},
 		{rc.steel, rc.steel, rc.steel},
 	}
 })
 
-minetest.register_craftitem("laptop:floppy", {
+minetest.register_craftitem("hades_laptop:floppy", {
 	description = 'High density floppy',
 	inventory_image = "laptop_diskette.png",
 	groups = {laptop_removable_floppy = 1},
@@ -222,7 +222,7 @@ minetest.register_craftitem("laptop:floppy", {
 })
 
 minetest.register_craft({
-	output = 'laptop:floppy',
+	output = 'hades_laptop:floppy',
 	recipe = {
 		{rc.steel, rc.steel, rc.steel},
 		{rc.steel, rc.programmer, rc.steel},
@@ -230,7 +230,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:usbstick", {
+minetest.register_craftitem("hades_laptop:usbstick", {
 	description = 'USB storage stick',
 	inventory_image = "laptop_usb.png",
 	groups = {laptop_removable_usb = 1},
@@ -238,7 +238,7 @@ minetest.register_craftitem("laptop:usbstick", {
 })
 
 minetest.register_craft({
-	output = 'laptop:usbstick',
+	output = 'hades_laptop:usbstick',
 	recipe = {
 		{'', rc.steel, ''},
 		{'', rc.programmer, ''},
@@ -246,7 +246,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craftitem("laptop:printed_paper", {
+minetest.register_craftitem("hades_laptop:printed_paper", {
 	description = 'Printed paper',
 	inventory_image = "laptop_printed_paper.png",
 	groups = {not_in_creative_inventory = 1},
@@ -259,7 +259,7 @@ minetest.register_craftitem("laptop:printed_paper", {
 				" by " .. (data.author or "unknown") .. " from " .. os.date("%c", data.timestamp) .. "]"..
 				"textarea[0.5,1;7.5,7;;" ..
 				minetest.formspec_escape(data.text or "test text") .. ";]"
-	minetest.show_formspec(user:get_player_name(), "laptop:printed_paper", formspec)
+	minetest.show_formspec(user:get_player_name(), "hades_laptop:printed_paper", formspec)
 	return itemstack
 	end
 

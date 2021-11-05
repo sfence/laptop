@@ -28,8 +28,8 @@ function realchess.move(data, pos, from_list, from_index, to_list, to_index, _, 
 	end
 
 	local inv = meta:get_inventory()
-	local pieceFrom = inv:get_stack(from_list, from_index):get_name():sub(8) --:sub(8) cuts "laptop:"
-	local pieceTo = inv:get_stack(to_list, to_index):get_name():sub(8) --:sub(8) cuts "laptop:"
+	local pieceFrom = inv:get_stack(from_list, from_index):get_name():sub(8) --:sub(8) cuts "hades_laptop:"
+	local pieceTo = inv:get_stack(to_list, to_index):get_name():sub(8) --:sub(8) cuts "hades_laptop:"
 	local thisMove -- will replace lastMove when move is legal
 
 	if pieceFrom:find("white") then
@@ -78,13 +78,13 @@ function realchess.move(data, pos, from_list, from_index, to_list, to_index, _, 
 					if pieceTo ~= "" then
 						return 0
 					elseif to_index >= 1 and to_index <= 8 then
-						inv:set_stack(from_list, from_index, "laptop:realchess_queen_white")
+						inv:set_stack(from_list, from_index, "hades_laptop:realchess_queen_white")
 					end
 				elseif from_x - 1 == to_x or from_x + 1 == to_x then
 					if not pieceTo:find("black") then
 						return 0
 					elseif to_index >= 1 and to_index <= 8 then
-						inv:set_stack(from_list, from_index, "laptop:realchess_queen_white")
+						inv:set_stack(from_list, from_index, "hades_laptop:realchess_queen_white")
 					end
 				else
 					return 0
@@ -123,13 +123,13 @@ function realchess.move(data, pos, from_list, from_index, to_list, to_index, _, 
 					if pieceTo ~= "" then
 						return 0
 					elseif to_index >= 57 and to_index <= 64 then
-						inv:set_stack(from_list, from_index, "laptop:realchess_queen_black")
+						inv:set_stack(from_list, from_index, "hades_laptop:realchess_queen_black")
 					end
 				elseif from_x - 1 == to_x or from_x + 1 == to_x then
 					if not pieceTo:find("white") then
 						return 0
 					elseif to_index >= 57 and to_index <= 64 then
-						inv:set_stack(from_list, from_index, "laptop:realchess_queen_black")
+						inv:set_stack(from_list, from_index, "hades_laptop:realchess_queen_black")
 					end
 				else
 					return 0
@@ -380,26 +380,26 @@ function realchess.move(data, pos, from_list, from_index, to_list, to_index, _, 
 				if to_x == 1 then
 					local idx57 = inv:get_stack(from_list, 57):get_name()
 
-					if data.castlingWhiteL == 1 and idx57 == "laptop:realchess_rook_white_1" then
+					if data.castlingWhiteL == 1 and idx57 == "hades_laptop:realchess_rook_white_1" then
 						for i = 58, from_index - 1 do
 							if inv:get_stack(from_list, i):get_name() ~= "" then
 								return 0
 							end
 						end
 						inv:set_stack(from_list, 57, "")
-						inv:set_stack(from_list, 59, "laptop:realchess_rook_white_1")
+						inv:set_stack(from_list, 59, "hades_laptop:realchess_rook_white_1")
 						check = false
 					end
 				elseif to_x == 6 then
 					local idx64 = inv:get_stack(from_list, 64):get_name()
 
-					if data.castlingWhiteR == 1 and idx64 == "laptop:realchess_rook_white_2" then
+					if data.castlingWhiteR == 1 and idx64 == "hades_laptop:realchess_rook_white_2" then
 						for i = from_index + 1, 63 do
 							if inv:get_stack(from_list, i):get_name() ~= "" then
 								return 0
 							end
 						end
-						inv:set_stack(from_list, 62, "laptop:realchess_rook_white_2")
+						inv:set_stack(from_list, 62, "hades_laptop:realchess_rook_white_2")
 						inv:set_stack(from_list, 64, "")
 						check = false
 					end
@@ -410,26 +410,26 @@ function realchess.move(data, pos, from_list, from_index, to_list, to_index, _, 
 				if to_x == 1 then
 					local idx1 = inv:get_stack(from_list, 1):get_name()
 
-					if data.castlingBlackL == 1 and idx1 == "laptop:realchess_rook_black_1" then
+					if data.castlingBlackL == 1 and idx1 == "hades_laptop:realchess_rook_black_1" then
 						for i = 2, from_index - 1 do
 							if inv:get_stack(from_list, i):get_name() ~= "" then
 								return 0
 							end
 						end
 						inv:set_stack(from_list, 1, "")
-						inv:set_stack(from_list, 3, "laptop:realchess_rook_black_1")
+						inv:set_stack(from_list, 3, "hades_laptop:realchess_rook_black_1")
 						check = false
 					end
 				elseif to_x == 6 then
 					local idx8 = inv:get_stack(from_list, 1):get_name()
 
-					if data.castlingBlackR == 1 and idx8 == "laptop:realchess_rook_black_2" then
+					if data.castlingBlackR == 1 and idx8 == "hades_laptop:realchess_rook_black_2" then
 						for i = from_index + 1, 7 do
 							if inv:get_stack(from_list, i):get_name() ~= "" then
 								return 0
 							end
 						end
-						inv:set_stack(from_list, 6, "laptop:realchess_rook_black_2")
+						inv:set_stack(from_list, 6, "hades_laptop:realchess_rook_black_2")
 						inv:set_stack(from_list, 8, "")
 						check = false
 					end
@@ -484,7 +484,7 @@ end
 local function register_piece(name, count)
 	for _, color in pairs({"black", "white"}) do
 	if not count then
-		minetest.register_craftitem("laptop:realchess_"..name.."_"..color, {
+		minetest.register_craftitem("hades_laptop:realchess_"..name.."_"..color, {
 			description = color:gsub("^%l", string.upper).." "..name:gsub("^%l", string.upper),
 			inventory_image = "laptop_realchess_"..name.."_"..color..".png",
 			stack_max = 1,
@@ -492,7 +492,7 @@ local function register_piece(name, count)
 		})
 	else
 		for i = 1, count do
-			minetest.register_craftitem("laptop:realchess_"..name.."_"..color.."_"..i, {
+			minetest.register_craftitem("hades_laptop:realchess_"..name.."_"..color.."_"..i, {
 				description = color:gsub("^%l", string.upper).." "..name:gsub("^%l", string.upper),
 				inventory_image = "laptop_realchess_"..name.."_"..color..".png",
 				stack_max = 1,
@@ -537,40 +537,40 @@ register_piece("king")
 				local inv = meta:get_inventory()
 				inv:set_size("board", 64)
 				inv:set_list("board", {
-					"laptop:realchess_rook_black_1",
-					"laptop:realchess_knight_black_1",
-					"laptop:realchess_bishop_black_1",
-					"laptop:realchess_queen_black",
-					"laptop:realchess_king_black",
-					"laptop:realchess_bishop_black_2",
-					"laptop:realchess_knight_black_2",
-					"laptop:realchess_rook_black_2",
-					"laptop:realchess_pawn_black_1",
-					"laptop:realchess_pawn_black_2",
-					"laptop:realchess_pawn_black_3",
-					"laptop:realchess_pawn_black_4",
-					"laptop:realchess_pawn_black_5",
-					"laptop:realchess_pawn_black_6",
-					"laptop:realchess_pawn_black_7",
-					"laptop:realchess_pawn_black_8",
+					"hades_laptop:realchess_rook_black_1",
+					"hades_laptop:realchess_knight_black_1",
+					"hades_laptop:realchess_bishop_black_1",
+					"hades_laptop:realchess_queen_black",
+					"hades_laptop:realchess_king_black",
+					"hades_laptop:realchess_bishop_black_2",
+					"hades_laptop:realchess_knight_black_2",
+					"hades_laptop:realchess_rook_black_2",
+					"hades_laptop:realchess_pawn_black_1",
+					"hades_laptop:realchess_pawn_black_2",
+					"hades_laptop:realchess_pawn_black_3",
+					"hades_laptop:realchess_pawn_black_4",
+					"hades_laptop:realchess_pawn_black_5",
+					"hades_laptop:realchess_pawn_black_6",
+					"hades_laptop:realchess_pawn_black_7",
+					"hades_laptop:realchess_pawn_black_8",
 					'','','','','','','','','','','','','','','','',
 					'','','','','','','','','','','','','','','','',
-					"laptop:realchess_pawn_white_1",
-					"laptop:realchess_pawn_white_2",
-					"laptop:realchess_pawn_white_3",
-					"laptop:realchess_pawn_white_4",
-					"laptop:realchess_pawn_white_5",
-					"laptop:realchess_pawn_white_6",
-					"laptop:realchess_pawn_white_7",
-					"laptop:realchess_pawn_white_8",
-					"laptop:realchess_rook_white_1",
-					"laptop:realchess_knight_white_1",
-					"laptop:realchess_bishop_white_1",
-					"laptop:realchess_queen_white",
-					"laptop:realchess_king_white",
-					"laptop:realchess_bishop_white_2",
-					"laptop:realchess_knight_white_2",
-					"laptop:realchess_rook_white_2"
+					"hades_laptop:realchess_pawn_white_1",
+					"hades_laptop:realchess_pawn_white_2",
+					"hades_laptop:realchess_pawn_white_3",
+					"hades_laptop:realchess_pawn_white_4",
+					"hades_laptop:realchess_pawn_white_5",
+					"hades_laptop:realchess_pawn_white_6",
+					"hades_laptop:realchess_pawn_white_7",
+					"hades_laptop:realchess_pawn_white_8",
+					"hades_laptop:realchess_rook_white_1",
+					"hades_laptop:realchess_knight_white_1",
+					"hades_laptop:realchess_bishop_white_1",
+					"hades_laptop:realchess_queen_white",
+					"hades_laptop:realchess_king_white",
+					"hades_laptop:realchess_bishop_white_2",
+					"hades_laptop:realchess_knight_white_2",
+					"hades_laptop:realchess_rook_white_2"
 				})
 			end
 			local formspec =

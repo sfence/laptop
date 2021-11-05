@@ -19,7 +19,7 @@ local function trigger_queue(app, mtos)
 		mtos.sysdata.dye_count = mtos.sysdata.dye_count - 0.1
 		mtos.bdev.removable_disk = nil -- force reading
 		local idata = mtos.bdev:get_removable_disk()
-		local stack = ItemStack("laptop:printed_paper")
+		local stack = ItemStack("hades_laptop:printed_paper")
 		local print_data = mtos.sysdata.print_queue[1]
 		stack:get_meta():from_table({ fields = print_data})
 		table.remove(mtos.sysdata.print_queue, 1)
@@ -132,7 +132,7 @@ laptop.register_app("printer_launcher", {
 	allow_metadata_inventory_put = function(app, mtos, player, listname, index, stack)
 		if mtos.sysdata.selected_view == 'output' then
 			-- nothing
-		elseif  mtos.sysdata.selected_view == 'paper' and stack:get_name() == 'default:paper' then
+		elseif  mtos.sysdata.selected_view == 'paper' and stack:get_name() == 'hades_core:paper' then
 			return stack:get_stack_max()
 		elseif mtos.sysdata.selected_view == 'dye' and stack:get_name() == 'dye:black' then
 			return stack:get_stack_max()
@@ -153,7 +153,7 @@ laptop.register_app("printer_launcher", {
 			idata.stack = ItemStack(mtos.sysdata.out_stack_save or "")
 		elseif fields.view_paper then
 			mtos.sysdata.selected_view = 'paper'
-			idata.stack = ItemStack('default:paper')
+			idata.stack = ItemStack('hades_core:paper')
 			idata.stack:set_count(mtos.sysdata.paper_count)
 		elseif fields.view_dye then
 			mtos.sysdata.selected_view = 'dye'

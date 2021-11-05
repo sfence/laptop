@@ -78,7 +78,7 @@ function laptop.register_view(name, def)
 end
 
 -- load all apps
-local app_path = minetest.get_modpath('laptop')..'/apps/'
+local app_path = minetest.get_modpath(minetest.get_current_modname())..'/apps/'
 local app_list = minetest.get_dir_list(app_path, false)
 
 for _, file in ipairs(app_list) do

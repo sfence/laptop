@@ -52,7 +52,7 @@ function laptop.register_theme(name, def)
 end
 
 -- load all themes
-local theme_path = minetest.get_modpath('laptop')..'/themes/'
+local theme_path = minetest.get_modpath(minetest.get_current_modname())..'/themes/'
 local theme_list = minetest.get_dir_list(theme_path, false)
 
 for _, file in ipairs(theme_list) do
