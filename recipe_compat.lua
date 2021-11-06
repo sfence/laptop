@@ -8,6 +8,7 @@ laptop.recipe_compat = {
 	fpga = '-unknown-', programmer = '-unknown-', delayer = '-unknown-',
 	controller = '-unknown-', light_red = '-unknown-', light_green = '-unknown-',
 	light_blue = '-unknown-',
+	battery = '-unknown-',
 }
 
 local rc = laptop.recipe_compat
@@ -66,3 +67,8 @@ if minetest.get_modpath('hades_mesecons_lightstone') then
 	rc.light_green = 'mesecons_lightstone:lightstone_green_off'
 	rc.light_blue = 'mesecons_lightstone:lightstone_blue_off'
 end
+
+if minetest.get_modpath('hades_technic') then
+	rc.battery = "hades_technic:battery_lithium"
+end
+

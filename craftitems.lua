@@ -68,9 +68,9 @@ minetest.register_craftitem("hades_laptop:bat", {
 minetest.register_craft({
 	output = 'hades_laptop:bat',
 	recipe = {
-		{rc.steel, rc.steel, rc.steel},
-		{rc.steel, rc.gates_diode, rc.steel},
-		{rc.steel, rc.steel, rc.steel},
+		{rc.steel, rc.battery, rc.steel},
+		{rc.battery, rc.gates_diode, rc.battery},
+		{rc.steel, rc.battery, rc.steel},
 	}
 })
 
