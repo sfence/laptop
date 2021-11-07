@@ -152,9 +152,9 @@ minetest.register_craftitem("hades_laptop:gpu", {
 minetest.register_craft({
 	output = 'hades_laptop:gpu',
 	recipe = {
-		{rc.steel, rc.steel, rc.steel},
-		{rc.steel, rc.fpga, rc.steel},
-		{rc.steel, rc.steel, rc.steel},
+		{rc.steel, rc.silicon, rc.steel},
+		{'hades_laptop:fan', rc.fpga, 'hades_laptop:fan'},
+		{rc.steel, rc.silicon, rc.steel},
 	}
 })
 
@@ -182,7 +182,7 @@ minetest.register_craft({
 	recipe = {
 		{rc.controller, rc.fpga, rc.gates_nand},
 		{'dye:dark_green', 'dye:dark_green', 'dye:dark_green'},
-		{rc.steel, rc.steel, rc.steel},
+		{rc.steel, rc.copper, rc.steel},
 	}
 })
 
@@ -194,9 +194,9 @@ minetest.register_craftitem("hades_laptop:fan", {
 minetest.register_craft({
 	output = 'hades_laptop:fan',
 	recipe = {
-		{'', rc.steel, ''},
-		{rc.steel, rc.steel, rc.steel},
-		{'', rc.steel, ''},
+		{rc.plastic, rc.steel, rc.plastic},
+		{rc.steel, rc.motor, rc.steel},
+		{rc.plastic, rc.steel, rc.plastic},
 	}
 })
 
@@ -208,9 +208,9 @@ minetest.register_craftitem("hades_laptop:psu", {
 minetest.register_craft({
 	output = 'hades_laptop:psu',
 	recipe = {
-		{rc.steel, rc.steel, rc.steel},
+		{rc.steel, rc.lv_transformer, rc.steel},
 		{rc.controller, rc.fpga, 'hades_laptop:fan'},
-		{rc.steel, rc.steel, rc.steel},
+		{rc.steel, rc.lv_transformer, rc.steel},
 	}
 })
 
@@ -224,9 +224,9 @@ minetest.register_craftitem("hades_laptop:floppy", {
 minetest.register_craft({
 	output = 'hades_laptop:floppy',
 	recipe = {
-		{rc.steel, rc.steel, rc.steel},
-		{rc.steel, rc.programmer, rc.steel},
-		{rc.steel, rc.steel, rc.steel},
+		{rc.plastic, rc.plastic, rc.plastic},
+		{rc.plastic, rc.programmer, rc.plastic},
+		{rc.plastic, rc.plastic, rc.plastic},
 	}
 })
 
@@ -240,9 +240,9 @@ minetest.register_craftitem("hades_laptop:usbstick", {
 minetest.register_craft({
 	output = 'hades_laptop:usbstick',
 	recipe = {
-		{'', rc.steel, ''},
+		{'', rc.silicon, ''},
 		{'', rc.programmer, ''},
-		{'', rc.steel, ''},
+		{'', rc.plastic, ''},
 	}
 })
 

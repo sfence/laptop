@@ -8,12 +8,14 @@ laptop.recipe_compat = {
 	fpga = '-unknown-', programmer = '-unknown-', delayer = '-unknown-',
 	controller = '-unknown-', light_red = '-unknown-', light_green = '-unknown-',
 	light_blue = '-unknown-',
-	battery = '-unknown-',
+  plastic = '-unknown-', motor = '-unknown-',
+  battery = '-unknown-', lv_transformer = '-unknown-',
 }
 
 local rc = laptop.recipe_compat
 
 -- Fallback values from default mod
+<<<<<<< HEAD
 if minetest.get_modpath('hades_core') then
 	rc.tin = 'hades_core:tin_ingot'
 	rc.copper = 'hades_core:copper_ingot'
@@ -21,6 +23,10 @@ if minetest.get_modpath('hades_core') then
 	rc.steel = 'hades_core:steel_ingot'
 	rc.glass = 'hades_core:glass'
 	rc.diamond = 'hades_core:diamond'
+	rc.plastic = 'hades_core:steel_ingot'
+	rc.motor = 'hades_core:steel_ingot'
+	rc.battery = 'hades_core:steel_ingot'
+	rc.lv_transformer = 'hades_core:copper_ingot'
 end
 
 if minetest.get_modpath('homedecor') then
@@ -33,6 +39,7 @@ if minetest.get_modpath('homedecor') then
 	rc.fpga = 'homedecor:ic'
 	rc.programmer = 'homedecor:heating_element'
 	rc.controller = 'homedecor:motor'
+	rc.motor = 'homedecor:motor'
 end
 
 if minetest.get_modpath('hades_mesecons_materials') then
@@ -68,7 +75,17 @@ if minetest.get_modpath('hades_mesecons_lightstone') then
 	rc.light_blue = 'mesecons_lightstone:lightstone_blue_off'
 end
 
+if minetest.get_modpath('hades_materials') then
+  rc.plastic = 'hades_materials:plastic_sheeting'
+end
+
+if minetest.get_modpath('hades_extramaterials') then
+	rc.motor = 'hades_extramaterials:motor'
+end
+
 if minetest.get_modpath('hades_technic') then
-	rc.battery = "hades_technic:battery_lithium"
+	rc.battery = 'hades_technic:battery'
+	rc.lv_transformer = 'hades_technic:lv_transformer'
+	rc.silicon = 'hades_technic:doped_silicon_wafer'
 end
 
