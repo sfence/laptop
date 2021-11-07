@@ -15,7 +15,6 @@ laptop.recipe_compat = {
 local rc = laptop.recipe_compat
 
 -- Fallback values from default mod
-<<<<<<< HEAD
 if minetest.get_modpath('hades_core') then
 	rc.tin = 'hades_core:tin_ingot'
 	rc.copper = 'hades_core:copper_ingot'
