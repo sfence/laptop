@@ -1,7 +1,7 @@
 
 laptop.node_config = {}
 
-local have_technic = minetest.get_modpath("technic")
+local have_technic = minetest.get_modpath("hades_technic")
 
 local function on_construct(pos)
 	laptop.mtos_cache:free(pos)

@@ -64,7 +64,7 @@ laptop.supported_textcolors = {
 }
 
 -- have technic
-local have_technic = minetest.get_modpath("technic")
+local have_technic = minetest.get_modpath("hades_technic")
 
 -----------------------------------------------------
 -- Operating System cache
