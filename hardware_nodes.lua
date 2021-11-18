@@ -76,6 +76,8 @@ laptop.register_hardware("hades_laptop:core", {
 	}
 })
 
+-- NO PROCESOR IN RECIPE???
+--[[
 minetest.register_craft({
 	output = 'hades_laptop:core_item',
 	recipe = {
@@ -84,6 +86,7 @@ minetest.register_craft({
 	{'hades_laptop:bat', 'hades_laptop:case', 'dye:red', },
 	}
 })
+--]]
 
 laptop.register_hardware("hades_laptop:printer", {
 	description = "Flash Printex",
