@@ -28,6 +28,20 @@ if minetest.get_modpath('default') then
 	rc.lv_transformer = 'default:copper_ingot'
 end
 
+-- Hades Revisited support
+if minetest.get_modpath('hades_core') then
+	rc.tin = 'hades_core:tin_ingot'
+	rc.copper = 'hades_core:copper_ingot'
+	rc.gold = 'hades_core:gold_ingot'
+	rc.steel = 'hades_core:steel_ingot'
+	rc.glass = 'hades_core:glass'
+	rc.diamond = 'hades_core:diamond'
+	rc.plastic = 'hades_core:steel_ingot'
+	rc.motor = 'hades_core:steel_ingot'
+	rc.battery = 'hades_core:steel_ingot'
+	rc.lv_transformer = 'hades_core:copper_ingot'
+end
+
 if minetest.get_modpath('homedecor') then
 	rc.gates_diode = 'homedecor:paraffin'
 	rc.gates_and = 'homedecor:power_crystal'
@@ -41,12 +55,12 @@ if minetest.get_modpath('homedecor') then
 	rc.motor = 'homedecor:motor'
 end
 
-if minetest.get_modpath('mesecons_materials') then
+if minetest.get_modpath('mesecons_materials') or minetest.get_modpath("hades_mesecons_materials") then
 	rc.silicon = 'mesecons_materials:silicon'
 	rc.fiber = 'mesecons_materials:fiber'
 end
 
-if minetest.get_modpath('mesecons_gates') then
+if minetest.get_modpath('mesecons_gates') or minetest.get_modpath("hades_mesecons_gates") then
 	rc.gates_diode = 'mesecons_gates:diode_off'
 	rc.gates_and = 'mesecons_gates:and_off'
 	rc.gates_or = 'mesecons_gates:or_off'
@@ -55,20 +69,20 @@ if minetest.get_modpath('mesecons_gates') then
 	rc.gates_not = 'mesecons_gates:not_off'
 end
 
-if minetest.get_modpath('mesecons_fpga') then
+if minetest.get_modpath('mesecons_fpga') or minetest.get_modpath("hades_mesecons_fpga") then
 	rc.fpga = 'mesecons_fpga:fpga0000'
 	rc.programmer = 'mesecons_fpga:programmer'
 end
 
-if minetest.get_modpath('mesecons_delayer') then
+if minetest.get_modpath('mesecons_delayer') or minetest.get_modpath("hades_mesecons_delayer") then
 	rc.delayer = 'mesecons_delayer:delayer_off_1'
 end
 
-if minetest.get_modpath('mesecons_luacontroller') then
+if minetest.get_modpath('mesecons_luacontroller') or minetest.get_modpath("hades_mesecons_luacontroller") then
 	rc.controller = 'mesecons_luacontroller:luacontroller0000'
 end
 
-if minetest.get_modpath('mesecons_lightstone') then
+if minetest.get_modpath('mesecons_lightstone') or minetest.get_modpath("hades_mesecons_lightstone") then
 	rc.light_red = 'mesecons_lightstone:lightstone_red_off'
 	rc.light_green = 'mesecons_lightstone:lightstone_green_off'
 	rc.light_blue = 'mesecons_lightstone:lightstone_blue_off'
@@ -83,5 +97,11 @@ if minetest.get_modpath('technic') then
 	rc.battery = 'technic:battery'
 	rc.lv_transformer = 'technic:lv_transformer'
 	rc.silicon = 'technic:doped_silicon_wafer'
+end
+
+if minetest.get_modpath('hades_technic') then
+	rc.battery = 'hades_technic:battery_lithium'
+	rc.lv_transformer = 'hades_technic:lv_transformer'
+	rc.silicon = 'hades_technic:doped_silicon_wafer'
 end
 
